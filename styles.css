@@ -152,6 +152,47 @@ ul li {
     margin: 0;
 }
 
+.integrations {
+    text-align: center;
+    background-color: #ffffff; /* Fundo branco para bater com a imagem */
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    margin-top: 4rem;
+}
+
+.integrations h3 {
+    color: #121212;
+    margin-bottom: 0.5rem;
+}
+
+.integrations-subtitle {
+    color: #555555;
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+}
+
+.integrations-img-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.integrations-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply; /* Ajuda a remover imperfeições da borda branca caso haja */
+}
+
+@media (max-width: 768px) {
+    .integrations-img {
+        /* No mobile, a imagem larga vai ficar pequena, mas mantemos o aspect ratio */
+        min-width: 600px; /* Força um scroll horizontal no celular para não esmagar os logos */
+    }
+    .integrations-img-container {
+        overflow-x: auto;
+    }
+}
+
 footer {
     margin-top: 5rem;
     padding-top: 2rem;
